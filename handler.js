@@ -2,7 +2,7 @@ const axios = require("axios");
 
 const findLocationByIpURL = "http://ip-api.com/json/";
 const weatherApi =
-  process.env.WEATHER_API || "64f266fb3ffa0f2b1da717bf3720157e";
+  process.env.WEATHER_API;
 
 module.exports.weather = async (event) => {
   const ip = event.requestContext.http.sourceIp;
