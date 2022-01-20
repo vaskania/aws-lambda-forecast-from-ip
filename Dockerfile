@@ -4,4 +4,4 @@ COPY handler.js package*.json ${LAMBDA_TASK_ROOT}
 
 RUN npm ci
 
-CMD ["handler.handler"]
+CMD ["handler.weather"]
