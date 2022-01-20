@@ -1,0 +1,16 @@
+service: weather-api
+frameworkVersion: '2 || 3'
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  lambdaHashingVersion: '20201221'
+  region: eu-central-1
+
+functions:
+  weather:
+    handler: handler.weather
+    events:
+      - httpApi:
+          path: /
+          method: get
